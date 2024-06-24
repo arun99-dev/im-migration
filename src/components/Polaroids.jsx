@@ -1,4 +1,5 @@
-import { Flex, Image } from '@chakra-ui/react'
+import { Button, Flex, Image } from '@chakra-ui/react'
+import { motion} from 'framer-motion'
 
 import polaroidKito from '../images/polaroidKito.jpg'
 import polaroidElena from '../images/polaroidElena.jpg'
@@ -13,18 +14,24 @@ const polaroids = [
   { src: polaroidDenisa, alt: 'Denisa Capri' },
   { src: polaroidAndriy, alt: 'Andriy Shepitsen' }
 ]
-
 const Polaroids = () => {
   return (
-    <Flex h='100vh' p={20} justifyContent='center' flexWrap='wrap'>
+    <Flex h='100vh' p={20} justifyContent='center' alignItems='center' flexWrap='wrap'>
       {polaroids.map((polaroid, idx) => (
-        <Image
+        <Button
+          as={motion.button}
           key={idx}
-          {...polaroid}
-          w='175px'
-          objectFit='contain'
-          m='7'
-        />
+          w={175}
+          h='fit-content'
+          m={7}
+          p={0}
+          whileHover={{ scale: 1.1, transition: { duration: .1 } }}
+          whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
+        >
+          <Image
+            {...polaroid}
+          />
+        </Button>
       ))}
     </Flex>
   )

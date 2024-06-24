@@ -10,7 +10,7 @@ const Home = () => {
     <Box bgImg={background} bgPosition='center' bgRepeat='no-repeat' bgSize='cover'>
       <NavBar />
       <Polaroids />
-      <Button mb={10} colorScheme='red' position='fixed' left='50%' bottom='0' transform='translate(-50%, 0)'>Donate</Button>
+      <Button mb={10} colorScheme='red' position='fixed' left='50%' bottom={0} transform='translate(-50%, 0)'>Donate</Button>
     </Box>
   )
 }
