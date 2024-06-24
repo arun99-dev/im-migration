@@ -2,6 +2,7 @@ import React from 'react'
 import { IoMenu } from 'react-icons/io5'
 import { BsInfoLg } from 'react-icons/bs'
 import { HiLanguage } from 'react-icons/hi2'
+import { IoIosMoon, IoIosSunny } from 'react-icons/io'
 import { IoMdArrowDropdown, IoMdCall } from 'react-icons/io'
 import {
   Button,
@@ -9,6 +10,7 @@ import {
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
+  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   Flex,
@@ -20,14 +22,18 @@ import {
   MenuList,
   MenuOptionGroup,
   Stack,
+  useColorMode,
   useDisclosure
 } from '@chakra-ui/react'
 
 import logo from '../images/logo.png'
 
+
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
+
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex w='100%' p={10} position='fixed' justifyContent='space-between'>
       <IconButton icon={<Image src={logo} />} colorScheme='none' />
@@ -61,6 +67,14 @@ const NavBar = () => {
               </MenuList>
             </Menu>
           </DrawerBody>
+          <DrawerFooter>
+          <IconButton
+            icon={colorMode === 'light' ? <IoIosSunny /> : <IoIosMoon />}
+            isRound='true'
+            size='lg'
+            onClick={toggleColorMode}
+          />
+          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </Flex>
