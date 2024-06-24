@@ -1,7 +1,7 @@
 import React from 'react'
-import { IoMenu } from 'react-icons/io5'
 import { BsInfoLg } from 'react-icons/bs'
 import { HiLanguage } from 'react-icons/hi2'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { IoIosMoon, IoIosSunny } from 'react-icons/io'
 import { IoMdArrowDropdown, IoMdCall } from 'react-icons/io'
 import {
@@ -28,20 +28,18 @@ import {
 
 import logo from '../images/logo.png'
 
-
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
-
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
     <Flex w='100%' p={10} position='fixed' justifyContent='space-between'>
       <IconButton icon={<Image src={logo} />} colorScheme='none' />
       <IconButton
         aria-label='Menu'
-        icon={<IoMenu />}
+        icon={<GiHamburgerMenu color='white' />}
         colorScheme='none'
-        fontSize={35}
+        fontSize={30}
         onClick={onOpen}
       />
       <Drawer
