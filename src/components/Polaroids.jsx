@@ -16,10 +16,10 @@ const polaroids = [
 
 const Polaroids = () => {
   return (
-    <Flex h='100vh' justifyContent='center' flexWrap='wrap'>
-      {polaroids.map((polaroid, index) => (
+    <Flex h='100vh' p={20} justifyContent='center' flexWrap='wrap'>
+      {polaroids.map((polaroid, idx) => (
         <Image
-          key={index}
+          key={idx}
           {...polaroid}
           w='175px'
           objectFit='contain'
