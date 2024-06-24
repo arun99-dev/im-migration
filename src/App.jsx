@@ -1,10 +1,10 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import NavBar from './components/NavBar.jsx'
 
 function App() {
   return (
-    <ChakraProvider>
-      <h1>I&apos;M-Migration</h1>
-    </ChakraProvider>
+    <>
+      <NavBar />
+    </>
   )
 }
 
