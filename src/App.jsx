@@ -1,11 +1,9 @@
-import NavBar from './components/NavBar.jsx'
-import Polaroids from './components/Polaroids.jsx'
+import Home from './Home.jsx'
 
 function App() {
   return (
     <>
-      <NavBar />
-      <Polaroids />
+      <Home />
     </>
   )
 }
