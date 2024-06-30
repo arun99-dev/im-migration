@@ -30,7 +30,7 @@ const NavBar = ({ selectedLang, setSelectedLang }) => {
         boxSizing: 'border-box',
         display: 'flex',
         justifyContent: 'space-between',
-        position: 'absolute',
+        position: 'fixed',
         top: 0,
         zIndex: 1,
         background: 'var(--dark)'

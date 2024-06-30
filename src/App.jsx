@@ -8,13 +8,13 @@ import './App.css'
 
 const App = () => {
   const [selectedLang, setSelectedLang] = useState(0)
-  const [selectedSoul, setSelectedSoul] = useState(null)
-  console.log(selectedSoul)
+  const [selectedSoul, setSelectedSoul] = useState('')
+
   return (
     <>
       <Navbar selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
-      {<Home selectedLang={selectedLang} setSelectedSoul={setSelectedSoul} />}
-      {/* {selectedSoul && <Kito selectedLang={selectedLang} />} */}
+      {!selectedSoul && <Home selectedLang={selectedLang} setSelectedSoul={setSelectedSoul} />}
+      {selectedSoul === 'kito' && <Kito selectedLang={selectedLang} />}
     </>
   )
 }
