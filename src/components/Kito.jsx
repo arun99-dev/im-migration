@@ -1,5 +1,5 @@
 import parse from 'html-react-parser'
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 
 import kito1Img from '../images/kito/kito1.png'
 import kito5SeaImg from '../images/kito/kito5Sea.png'
@@ -53,7 +53,7 @@ const SlideR = (p, img) => {
   return (
     <Box sx={{ marginBottom: '5vw', display: 'flex', alignItems: 'center' }}>
       <p style={{ height: '50%', fontSize: '2vw', marginRight: '5vw' }}>{parse(p)}</p>
-      <img src={img} style={{ width: '40vw' }}/>
+      <img src={img} alt="journey image" style={{ width: '40vw' }}/>
     </Box>
   )
 }
@@ -61,7 +61,7 @@ const SlideR = (p, img) => {
 const SlideL = (p, img) => {
   return (
     <Box sx={{ marginBottom: '5vw', display: 'flex', alignItems: 'center' }}>
-      <img src={img} style={{ width: '40vw' }}/>
+      <img src={img} alt="journey image" style={{ width: '40vw' }}/>
       <p style={{ fontSize: '2vw', marginLeft: '5vw' }}>{parse(p)}</p>
     </Box>
   )
@@ -82,7 +82,7 @@ const Kito = ({ selectedIndex }) => {
               textAlign: 'start',
               color: 'hsla(357.29, 92.248%, 45.935%)'
             }}
-          >I'm</p>
+          >I&#39;m</p>
           <p
             style={{
               width: '100%',
@@ -103,13 +103,13 @@ const Kito = ({ selectedIndex }) => {
               zIndex: -1
             }}
           />
-          <img src={kito1Img} style={{ width: '50vw', maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 80%, transparent 100%' }} />
+          <img src={kito1Img} alt="journey image" style={{ width: '50vw', maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 80%, transparent 100%' }} />
           <p style={{ fontSize: '2vw' }}>{parse(lang.paragraph1)}</p>
         </Box>
         {SlideR(lang.paragraph2, kito2KidsImg)}
         {SlideR(lang.paragraph3, kito3WorkerImg)}
         <Box sx={{ marginBottom: '5vw' }}>
-          <img src={kito4CarGif} style={{ width: '100%' }}/>
+          <img src={kito4CarGif} alt="journey image" style={{ width: '100%' }}/>
         </Box>
         {SlideL(lang.paragraph4, kito5SeaImg)}
         {SlideR(lang.paragraph5, kito6GangRaftImg)}
@@ -150,7 +150,7 @@ const Kito = ({ selectedIndex }) => {
         <p style={{ width: '35%', margin: 0, fontSize: '2vw', fontWeight: 700, textAlign: 'center' }}>{parse(lang.paragraph15)}</p>
       </Box>
       <Box sx={{ width: '100%', height: '50vw', padding: '0 2rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'hsla(357.29, 92.248%, 45.935%)' }}>
-        <p style={{ margin: 0, fontSize: '15vw', fontWeight: 700 }}>I'm KITO</p>
+        <p style={{ margin: 0, fontSize: '15vw', fontWeight: 700 }}>I&#39;m KITO</p>
         <p style={{ margin: 0, fontSize: '5vw' }}>{parse(lang.paragraph16)}</p>
       </Box>
     </>

@@ -24,18 +24,20 @@ const NavBar = ({ selectedIndex, setSelectedIndex }) => {
   return (
     <Box
       sx={{
+        width: '100%',
         paddingX: 2,
         paddingY: 1,
+        boxSizing: 'border-box',
         display: 'flex',
         justifyContent: 'space-between',
-        position: 'sticky',
+        position: 'absolute',
         top: 0,
         zIndex: 1,
         background: 'var(--dark)'
       }}
     >
       <Button onClick={() => window.location.reload()}>
-        <img src={logo} alt="descrizione" style={{ width: 150 }} />
+        <img src={logo} alt="im-migration logo" style={{ width: 150 }} />
       </Button>
       <IconButton sx={{ fontSize: 50 }} onClick={() => setOpen(true)}>
         <RiMenuLine style={{ color: 'var(--red)' }}/>

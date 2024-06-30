@@ -4,6 +4,15 @@
   --red: hsla(357.29, 92.248%, 45.935%, 1);
   --dark: hsla(225, 8.7%, 9.02%, 1);
   font-family: 'Inter', sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {

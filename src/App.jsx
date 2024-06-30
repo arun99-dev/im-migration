@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
-import Kito from './components/Kito.jsx'
+import Home from './components/Home.jsx'
+// import Kito from './components/Kito.jsx'
 import Navbar from './components/NavBar.jsx'
 
 import './App.css'
@@ -10,7 +11,8 @@ const App = () => {
   return (
     <>
       <Navbar selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
-      <Kito selectedIndex={selectedIndex} />
+      <Home />
+      {/* <Kito selectedIndex={selectedIndex} /> */}
     </>
   )
 }
