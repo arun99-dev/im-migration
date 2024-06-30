@@ -51,7 +51,6 @@ const en = {
 
 const Kito = ({ selectedLang }) => {
   let lang = selectedLang ? en : it
-  console.log('Samu Gay')
   return (
     <>
       <Box sx={{ width: '100%', paddingX: 6, paddingY: 10, boxSizing: 'border-box' }}>
