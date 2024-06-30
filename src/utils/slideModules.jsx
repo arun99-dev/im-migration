@@ -45,6 +45,7 @@ export const SlideStat = (title, desc, source) => {
         style={{
           width: '80%',
           margin: 0,
+          marginTop: 5,
           fontSize: '1vw',
           textAlign: 'end'
         }}
