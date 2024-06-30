@@ -54,6 +54,7 @@ const Home = ({ selectedLang, setSelectedSoul }) => {
             backgroundColor: 'var(--red)'
           }
         }}
+        onClick={() => window.open('https://shorturl.at/eLNev', '_blank')}
         component={motion.button}
         whileHover={{ scale: 1.1, transition: { duration: .1 } }}
         whileTap={{ scale: 0.9, transition: { duration: .1 }  }}

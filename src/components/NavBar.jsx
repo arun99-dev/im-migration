@@ -23,7 +23,6 @@ const NavBar = ({ selectedSoul, selectedLang, setSelectedLang }) => {
   const [openMenu, setOpenMenu] = useState(true)
   const toggleLang = (lang) => () => {
     setOpenDrawer(false)
-    setOpenMenu(false)
     setSelectedLang(lang)
   }
 
@@ -61,7 +60,7 @@ const NavBar = ({ selectedSoul, selectedLang, setSelectedLang }) => {
               </ListItemButton>
             </ListItem>
             <ListItem>
-              <ListItemButton>
+              <ListItemButton onClick={() => window.open('https://shorturl.at/Q18xZ', '_blank')}>
                 <IoIosCall color='var(--red)' />
                 <ListItemText primary={'Numero Anti-Razzismo'} sx={{ marginLeft: 2 }} />
               </ListItemButton>
