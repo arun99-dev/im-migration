@@ -1,11 +1,17 @@
-import Home from './Home.jsx'
+import { useState } from 'react'
 
-function App() {
+import Kito from './components/Kito.jsx'
+import Navbar from './components/NavBar.jsx'
+
+import './App.css'
+
+const App = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0)
   return (
     <>
-      <Home />
+      <Navbar selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
+      <Kito selectedIndex={selectedIndex} />
     </>
   )
 }
-
 export default App

@@ -1,81 +1,69 @@
-import React from 'react'
-import { BsInfoLg } from 'react-icons/bs'
-import { HiLanguage } from 'react-icons/hi2'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { IoIosMoon, IoIosSunny } from 'react-icons/io'
-import { IoMdArrowDropdown, IoMdCall } from 'react-icons/io'
+import { useState } from 'react'
 import {
+  Box,
+  List,
   Button,
   Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  Flex,
+  Divider,
+  ListItem,
   IconButton,
-  Image,
-  Menu,
-  MenuButton,
-  MenuItemOption,
-  MenuList,
-  MenuOptionGroup,
-  Stack,
-  useColorMode,
-  useDisclosure
-} from '@chakra-ui/react'
+  ListItemText,
+  ListItemButton 
+} from '@mui/material/'
+import { RiMenuLine } from 'react-icons/ri'
 
-import logo from '../images/logo.png'
+import logo from '../images/logoLight.png'
 
-const NavBar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = React.useRef()
-  const { colorMode, toggleColorMode } = useColorMode()
+const NavBar = ({ selectedIndex, setSelectedIndex }) => {
+  const [open, setOpen] = useState(false)
+  const toggleLang = (lang) => () => {
+    setOpen(false)
+    setSelectedIndex(lang)
+  }
+
   return (
-    <Flex w='100%' p={10} position='fixed' justifyContent='space-between'>
-      <IconButton icon={<Image src={logo} />} colorScheme='none' />
-      <IconButton
-        aria-label='Menu'
-        icon={<GiHamburgerMenu color='white' />}
-        colorScheme='none'
-        fontSize={30}
-        onClick={onOpen}
-      />
-      <Drawer
-        isOpen={isOpen}
-        placement='right'
-        onClose={onClose}
-        finalFocusRef={btnRef}
-      >
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader />
-          <DrawerBody as={Stack} align='start' spacing={5} p={10}>
-            <Button leftIcon={<BsInfoLg fontSize={20} />} variant='none'>About: Us & Project</Button>
-            <Button leftIcon={<IoMdCall fontSize={20} />} variant='none'>Anti-Discrimination</Button>
-            <Menu>
-              <MenuButton as={Button} leftIcon={<HiLanguage fontSize={20} />} rightIcon={<IoMdArrowDropdown fontSize={20} />} variant='none'>Language</MenuButton>
-              <MenuList>
-              <MenuOptionGroup title='Select Language' defaultValue='eng' type='radio'>
-                <MenuItemOption value='eng'>English</MenuItemOption>
-                <MenuItemOption value='it'>Italiano</MenuItemOption>
-              </MenuOptionGroup>
-              </MenuList>
-            </Menu>
-          </DrawerBody>
-          <DrawerFooter>
-          <IconButton
-            icon={colorMode === 'light' ? <IoIosSunny /> : <IoIosMoon />}
-            isRound='true'
-            size='lg'
-            onClick={toggleColorMode}
-          />
-          </DrawerFooter>
-        </DrawerContent>
+    <Box
+      sx={{
+        paddingX: 2,
+        paddingY: 1,
+        display: 'flex',
+        justifyContent: 'space-between',
+        position: 'sticky',
+        top: 0,
+        zIndex: 1,
+        background: 'var(--dark)'
+      }}
+    >
+      <Button onClick={() => window.location.reload()}>
+        <img src={logo} alt="descrizione" style={{ width: 150 }} />
+      </Button>
+      <IconButton sx={{ fontSize: 50 }} onClick={() => setOpen(true)}>
+        <RiMenuLine style={{ color: 'var(--red)' }}/>
+      </IconButton>
+      <Drawer anchor={'right'} open={open} onClose={() => setOpen(false)}>
+        <Box
+          sx={{ height: '100%', color: 'var(--red)', background: 'var(--dark)' }}
+          onClose={() => setOpen(false)}
+        >
+          <List>
+            {['Chi Siamo?', 'Numero Anti-Razzismo'].map((text) => (
+              <ListItem key={text}>
+                <ListItemButton><ListItemText primary={text} /></ListItemButton>
+              </ListItem>
+            ))}
+            <Divider />
+            <List>
+              <ListItemButton selected={selectedIndex === 0} onClick={toggleLang(0)}>
+                <ListItemText primary='Italiano' />
+              </ListItemButton>
+              <ListItemButton selected={selectedIndex === 1} onClick={toggleLang(1)}>
+                <ListItemText primary='English' />
+              </ListItemButton>
+            </List>
+          </List>
+        </Box>
       </Drawer>
-    </Flex>
+    </Box>
   )
 }
 
