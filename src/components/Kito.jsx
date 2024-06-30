@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModule.jsx'
+import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
 
 import kito1Img from '../images/kito/kito1.png'
 import kito5SeaImg from '../images/kito/kito5Sea.png'
