@@ -71,9 +71,9 @@ export const SlideIntro = (name, mapImg, soulImg, intro) => {
         <img
           src={mapImg}
           style={{
-            width: '50vw',
+            height: '100%',
             position: 'absolute',
-            top: -50,
+            top: 0,
             right: 0,
             zIndex: -1
           }}
@@ -89,7 +89,7 @@ export const SlideOutro = (dataDesc, title, desc) => {
   return (
     <>
       <Box sx={{ width: '100%', height: '50vw', padding: '0 2rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'hsla(357.29, 92.248%, 45.935%)' }}>
-        <p style={{ width: '35%', margin: 0, fontSize: '2vw', fontWeight: 700, textAlign: 'center' }}>{dataDesc}</p>
+        <p style={{ width: '50%', margin: 0, fontSize: '2vw', fontWeight: 700, textAlign: 'center' }}>{dataDesc}</p>
       </Box>
       <Box sx={{ width: '100%', height: '50vw', padding: '0 2rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'hsla(357.29, 92.248%, 45.935%)' }}>
         <p style={{ margin: 0, fontSize: '15vw', fontWeight: 700 }}>{title}</p>
