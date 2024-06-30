@@ -67,8 +67,8 @@ const SlideL = (p, img) => {
   )
 }
 
-const Kito = ({ selectedIndex }) => {
-  let lang = selectedIndex ? en : it
+const Kito = ({ selectedLang }) => {
+  let lang = selectedLang ? en : it
   return (
     <>
       <Box sx={{ width: '100%', padding: '0 2rem', boxSizing: 'border-box' }}>

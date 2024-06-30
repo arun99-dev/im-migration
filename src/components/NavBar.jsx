@@ -14,11 +14,11 @@ import { RiMenuLine } from 'react-icons/ri'
 
 import logo from '../images/logoLight.png'
 
-const NavBar = ({ selectedIndex, setSelectedIndex }) => {
+const NavBar = ({ selectedLang, setSelectedLang }) => {
   const [open, setOpen] = useState(false)
   const toggleLang = (lang) => () => {
     setOpen(false)
-    setSelectedIndex(lang)
+    setSelectedLang(lang)
   }
 
   return (
@@ -55,10 +55,10 @@ const NavBar = ({ selectedIndex, setSelectedIndex }) => {
             ))}
             <Divider />
             <List>
-              <ListItemButton selected={selectedIndex === 0} onClick={toggleLang(0)}>
+              <ListItemButton selected={selectedLang === 0} onClick={toggleLang(0)}>
                 <ListItemText primary='Italiano' />
               </ListItemButton>
-              <ListItemButton selected={selectedIndex === 1} onClick={toggleLang(1)}>
+              <ListItemButton selected={selectedLang === 1} onClick={toggleLang(1)}>
                 <ListItemText primary='English' />
               </ListItemButton>
             </List>

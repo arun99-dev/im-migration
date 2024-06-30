@@ -5,10 +5,10 @@ import ana from '../images/polaroid/ana.png'
 import kito from '../images/polaroid/kito.png'
 import elena from '../images/polaroid/elena.png'
 import background from '../images/background.png'
-import jianLi from '../images/polaroid/jianLi.png'
+import jian from '../images/polaroid/jian.png'
 import kelvis from '../images/polaroid/kelvis.png'
 
-const Home = ({ selectedIndex }) => {
+const Home = ({ selectedLang, setSelectedSoul }) => {
   return (
     <Box
       sx={{
@@ -27,9 +27,10 @@ const Home = ({ selectedIndex }) => {
         overflow: 'scroll'
       }}
     >
-      {[kelvis, ana, kito, elena, jianLi].map((img, index) => (
+      {[kelvis, ana, kito, elena, jian].map((img, index) => (
         <Button
           key={index}
+          onClick={() => setSelectedSoul(img.split('/').pop().split('.')[0])}
           component={motion.button}
           whileHover={{ scale: 1.1, transition: { duration: .1 } }}
           whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
@@ -57,7 +58,7 @@ const Home = ({ selectedIndex }) => {
         whileHover={{ scale: 1.1, transition: { duration: .1 } }}
         whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
       >
-        {selectedIndex ? 'Donate' : 'Dona'}
+        {selectedLang ? 'Donate' : 'Dona'}
       </Button>
     </Box>
   )

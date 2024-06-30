@@ -1,18 +1,20 @@
 import { useState } from 'react'
 
 import Home from './components/Home.jsx'
-// import Kito from './components/Kito.jsx'
+import Kito from './components/Kito.jsx'
 import Navbar from './components/NavBar.jsx'
 
 import './App.css'
 
 const App = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [selectedLang, setSelectedLang] = useState(0)
+  const [selectedSoul, setSelectedSoul] = useState(null)
+  console.log(selectedSoul)
   return (
     <>
-      <Navbar selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
-      <Home selectedIndex={selectedIndex} />
-      {/* <Kito selectedIndex={selectedIndex} /> */}
+      <Navbar selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
+      {<Home selectedLang={selectedLang} setSelectedSoul={setSelectedSoul} />}
+      {/* {selectedSoul && <Kito selectedLang={selectedLang} />} */}
     </>
   )
 }
