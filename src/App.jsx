@@ -13,7 +13,6 @@ import './App.css'
 const App = () => {
   const [selectedLang, setSelectedLang] = useState(0)
   const [selectedSoul, setSelectedSoul] = useState('')
-  console.log(selectedSoul)
   return (
     <>
       <Navbar selectedSoul={selectedSoul} selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
