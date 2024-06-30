@@ -30,7 +30,7 @@ const Home = ({ selectedLang, setSelectedSoul }) => {
       {[klevis, ana, kito, elena, jian].map((img, index) => (
         <Button
           key={index}
-          onClick={() => setSelectedSoul(img.split('/').pop().split(img.includes ? '-' : '.')[0])}
+          onClick={() => setSelectedSoul(img.split('/').pop().split(img.includes('-') ? '-' : '.')[0])}
           component={motion.button}
           whileHover={{ scale: 1.1, transition: { duration: .1 } }}
           whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
