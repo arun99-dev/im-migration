@@ -6,7 +6,7 @@ import kito from '../images/polaroid/kito.png'
 import elena from '../images/polaroid/elena.png'
 import background from '../images/background.png'
 import jian from '../images/polaroid/jian.png'
-import kelvis from '../images/polaroid/kelvis.png'
+import klevis from '../images/polaroid/klevis.png'
 
 const Home = ({ selectedLang, setSelectedSoul }) => {
   return (
@@ -27,7 +27,7 @@ const Home = ({ selectedLang, setSelectedSoul }) => {
         overflow: 'scroll'
       }}
     >
-      {[kelvis, ana, kito, elena, jian].map((img, index) => (
+      {[klevis, ana, kito, elena, jian].map((img, index) => (
         <Button
           key={index}
           onClick={() => setSelectedSoul(img.split('/').pop().split('.')[0])}
