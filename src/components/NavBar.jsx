@@ -4,7 +4,6 @@ import {
   List,
   Button,
   Drawer,
-  Divider,
   Collapse,
   ListItem,
   IconButton,
