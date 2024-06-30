@@ -12,9 +12,10 @@ import {
 } from '@mui/material/'
 import { RiMenuLine } from 'react-icons/ri'
 
-import logo from '../images/logoLight.png'
+import logoDark from '../images/logoDark.png'
+import logoLight from '../images/logoLight.png'
 
-const NavBar = ({ selectedLang, setSelectedLang }) => {
+const NavBar = ({ selectedSoul, selectedLang, setSelectedLang }) => {
   const [open, setOpen] = useState(false)
   const toggleLang = (lang) => () => {
     setOpen(false)
@@ -33,11 +34,11 @@ const NavBar = ({ selectedLang, setSelectedLang }) => {
         position: 'fixed',
         top: 0,
         zIndex: 1,
-        background: 'var(--dark)'
+        background: selectedSoul ? 'var(--dark)' : 'none'
       }}
     >
       <Button onClick={() => window.location.reload()}>
-        <img src={logo} alt="im-migration logo" style={{ width: 150 }} />
+        <img src={selectedSoul ? logoLight : logoDark} alt="im-migration logo" style={{ width: 150 }} />
       </Button>
       <IconButton sx={{ fontSize: 50 }} onClick={() => setOpen(true)}>
         <RiMenuLine style={{ color: 'var(--red)' }}/>

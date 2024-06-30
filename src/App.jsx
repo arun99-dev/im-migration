@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
+      <Navbar selectedSoul={selectedSoul} selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
       {!selectedSoul && <Home selectedLang={selectedLang} setSelectedSoul={setSelectedSoul} />}
       {selectedSoul === 'kito' && <Kito selectedLang={selectedLang} />}
       {selectedSoul === 'klevis' && <Klevis selectedLang={selectedLang} />}
