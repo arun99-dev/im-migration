@@ -11,8 +11,9 @@ import {
   ListItemButton 
 } from '@mui/material/'
 import { RiMenuLine } from 'react-icons/ri'
-import { HiTranslate } from "react-icons/hi"
+import { HiTranslate } from 'react-icons/hi'
 import { BsInfoCircleFill } from 'react-icons/bs'
+import { BiSolidDonateHeart } from 'react-icons/bi'
 import { IoIosCall, IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
 
 import logoDark from '../images/logoDark.webp'
@@ -82,6 +83,12 @@ const NavBar = ({ selectedSoul, selectedLang, setSelectedLang }) => {
                 </ListItemButton>
               </List>
             </Collapse>
+            <ListItem sx={{ position: 'fixed', bottom: 0 }}>
+              <ListItemButton onClick={() => window.open('https://shorturl.at/eLNev', '_blank')}>
+                <BiSolidDonateHeart color='var(--red)' />
+                <ListItemText primary={selectedLang ? 'Donate' : 'Dona'} sx={{ marginLeft: 2 }} />
+              </ListItemButton>
+            </ListItem>
           </List>
         </Box>
       </Drawer>

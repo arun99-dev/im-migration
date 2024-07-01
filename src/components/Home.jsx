@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Box, Button } from '@mui/material'
+import { BiSolidDonateHeart } from 'react-icons/bi'
 
 import ana from '../images/polaroid/ana.webp'
 import kito from '../images/polaroid/kito.webp'
@@ -44,8 +45,8 @@ const Home = ({ selectedLang, setSelectedSoul }) => {
           paddingY: 1,
           position: 'absolute',
           bottom: 30,
-          fontSize: 15,
-          fontWeight: 'bold',
+          fontSize: 20,
+          fontWeight: 900,
           color: 'white',
           textTransform: 'inherit',
           backgroundColor: 'var(--red)',
@@ -60,6 +61,7 @@ const Home = ({ selectedLang, setSelectedSoul }) => {
         whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
       >
         {selectedLang ? 'Donate' : 'Dona'}
+        <BiSolidDonateHeart style={{ marginLeft: 5 }}/>
       </Button>
     </Box>
   )
