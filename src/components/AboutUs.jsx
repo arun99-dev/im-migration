@@ -24,10 +24,10 @@ const en = {
 const Team = (name, surname, url, dev) => {
   return (
     <ListItem style={{ justifyContent: !dev && 'end' }}>
-      {dev && <IconButton onClick={() => window.open(url, '_blank')}><BiLogoInstagramAlt style={{ fontSize: 30, color: 'var(--dark)' }}/></IconButton>}
-      <p style={{ margin: 0, fontSize: 30, fontWeight: 600, color: 'var(--dark)' }}>{name}&nbsp;</p>
-      <p style={{ margin: 0, fontSize: 30, color: 'var(--dark)' }}>{surname}</p>
-      {!dev && <IconButton onClick={() => window.open(url, '_blank')}><BiLogoInstagramAlt style={{ fontSize: 30, color: 'var(--dark)' }}/></IconButton>}
+      {dev && <IconButton onClick={() => window.open(url, '_blank')}><BiLogoInstagramAlt style={{ fontSize: '3vw', color: 'var(--dark)' }}/></IconButton>}
+      <p style={{ margin: 0, fontSize: '3vw', fontWeight: 600, color: 'var(--dark)' }}>{name}&nbsp;</p>
+      <p style={{ margin: 0, fontSize: '3vw', color: 'var(--dark)' }}>{surname}</p>
+      {!dev && <IconButton onClick={() => window.open(url, '_blank')}><BiLogoInstagramAlt style={{ fontSize: '3vw', color: 'var(--dark)' }}/></IconButton>}
     </ListItem>
   )
 }
@@ -36,14 +36,14 @@ const AboutUs = ({ selectedLang }) => {
   const lang = selectedLang ? en : it
   return (
     <>
-      <Box sx={{ width: '100%', paddingX: 20, paddingY: 15, boxSizing: 'border-box' }}>
+      <Box sx={{ width: '100%', paddingX: '5vw', paddingY: 15, boxSizing: 'border-box' }}>
         <p style={{ margin: 0, color: 'var(--red)', fontSize: '5vw', fontWeight: 700 }}>{parse(lang.paragraph1)}</p>
         <p style={{ marginBottom: 0, fontSize: '3vw', fontWeight: 600 }}>{parse(lang.paragraph2)}</p>
         <p style={{ margin: 0, fontSize: '2vw' }}>{parse(lang.paragraph3)}</p>
         <p style={{ marginBottom: 0, fontSize: '3vw', fontWeight: 600 }}>{parse(lang.paragraph4)}</p>
         <p style={{ margin: 0, fontSize: '2vw' }}>{parse(lang.paragraph5)}</p>
       </Box>
-      <Box sx={{ width: '100%', paddingX: 20, paddingY: 15, boxSizing: 'border-box', background: 'var(--red)' }}>
+      <Box sx={{ width: '100%', paddingX: '5vw', paddingY: 10, boxSizing: 'border-box', background: 'var(--red)' }}>
         <p style={{ marginTop: 0, textAlign: 'center', color: 'var(--dark)', fontSize: '5vw', fontWeight: 700 }}>{lang.paragraph6}</p>
         <Grid>
           <List>
