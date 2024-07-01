@@ -49,7 +49,7 @@ const NavBar = ({ route, setRoute, selectedLang, setSelectedLang }) => {
         >
           <List>
             <ListItem>
-              <ListItemButton onClick={() => (setRoute('aboutUs'), setOpenDrawer(false))}>
+              <ListItemButton onClick={() => (setRoute('aboutUs'), setOpenDrawer(false), window.scrollTo({ top: 0 }))}>
                 <BsInfoCircleFill color='var(--red)' />
                 <ListItemText primary={selectedLang ? 'About Us' : 'Chi Siamo?'} sx={{ marginLeft: 2 }} />
               </ListItemButton>
