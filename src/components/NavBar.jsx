@@ -10,8 +10,8 @@ import {
   ListItemText,
   ListItemButton 
 } from '@mui/material/'
-import { RiMenuLine } from 'react-icons/ri'
 import { HiTranslate } from 'react-icons/hi'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { BsInfoCircleFill } from 'react-icons/bs'
 import { BiSolidDonateHeart } from 'react-icons/bi'
 import { IoIosCall, IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
@@ -46,7 +46,7 @@ const NavBar = ({ route, setRoute, selectedLang, setSelectedLang }) => {
         <img src={route ? logoLight : logoDark} alt="im-migration logo" style={{ width: 150 }} />
       </Button>
       <IconButton sx={{ fontSize: 50 }} onClick={() => setOpenDrawer(true)}>
-        <RiMenuLine style={{ color: 'var(--red)' }}/>
+        <GiHamburgerMenu style={{ color: 'var(--red)' }}/>
       </IconButton>
       <Drawer anchor={'right'} open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <Box
