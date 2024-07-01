@@ -24,8 +24,8 @@ const Scroll = () => {
       sx={{
         padding: 0,
         position: 'fixed',
-        bottom: 50,
-        right: 50,
+        bottom: '5vw',
+        right: '5vw',
         zIndex: 1,
         opacity: scrollPosition > 300 ? .5 : 0,
         background: 'var(--red)',

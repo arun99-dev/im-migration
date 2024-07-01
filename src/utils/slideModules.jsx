@@ -19,7 +19,7 @@ export const SlideIntro = (name, mapImg, soulImg, intro) => {
 
 export const SlideR = (p, img) => {
   return (
-    <Box sx={{ height: '100vh', display: 'flex', alignItems: 'center' }}>
+    <Box sx={{ height: '100vh', paddingY: 50, display: 'flex', alignItems: 'center' }}>
       <p style={{ fontSize: '2vw', marginRight: '5vw' }}>{parse(p)}</p>
       <img src={img} alt="journey image" style={{ width: '40vw' }}/>
     </Box>
@@ -28,7 +28,7 @@ export const SlideR = (p, img) => {
 
 export const SlideL = (p, img) => {
   return (
-    <Box sx={{ height: '100vh', display: 'flex', alignItems: 'center' }}>
+    <Box sx={{ height: '100vh', paddingY: 50, display: 'flex', alignItems: 'center' }}>
       <img src={img} alt="journey image" style={{ width: '40vw' }}/>
       <p style={{ fontSize: '2vw', marginLeft: '5vw' }}>{parse(p)}</p>
     </Box>
