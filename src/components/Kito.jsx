@@ -53,7 +53,7 @@ const Kito = ({ selectedLang }) => {
   let lang = selectedLang ? en : it
   return (
     <>
-      <Box sx={{ width: '100%', paddingX: 6, paddingY: 10, boxSizing: 'border-box' }}>
+      <Box sx={{ width: '100%', paddingX: 3, paddingY: 10, boxSizing: 'border-box' }}>
         {SlideIntro('KITO', kito1MapImg, kito1Img, lang.paragraph1)}
         {SlideR(lang.paragraph2, kito2KidsImg)}
         {SlideR(lang.paragraph3, kito3WorkerImg)}

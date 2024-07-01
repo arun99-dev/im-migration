@@ -1,14 +1,14 @@
 import { Box } from '@mui/material'
 import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
 
-import ana1Img from '../images/ana/ana1.png'
-import ana1MapImg from '../images/ana/ana1Map.png'
-import ana2DadImg from '../images/ana/ana2Dad.png'
-import ana7DadImg from '../images/ana/ana7Dad.png'
-import ana3TeenImg from '../images/ana/ana3Teen.png'
-import ana5QueueImg from '../images/ana/ana5Queue.png'
+import ana1Img from '../images/ana/ana1.webp'
+import ana1MapImg from '../images/ana/ana1Map.webp'
+import ana2DadImg from '../images/ana/ana2Dad.webp'
+import ana7DadImg from '../images/ana/ana7Dad.webp'
+import ana3TeenImg from '../images/ana/ana3Teen.webp'
+import ana5QueueImg from '../images/ana/ana5Queue.webp'
 import ana4TractorGif from '../images/ana/ana4Tractor.gif'
-import ana6ShoppingImg from '../images/ana/ana6Shopping.png'
+import ana6ShoppingImg from '../images/ana/ana6Shopping.webp'
 
 const it = {
   paragraph1: 'ho <span>40 anni</span> e questa è la mia storia di <span>fuga dalla Romania</span> con la mia famiglia all\'inizio degli anni \'90, in cerca di una <span>vita migliore</span> in Italia.',

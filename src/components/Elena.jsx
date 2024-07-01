@@ -1,15 +1,15 @@
 import { Box } from '@mui/material'
 import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
 
-import elena1Img from '../images/elena/elena1.png'
-import elena5TramImg from '../images/elena/elena5Tram.png'
+import elena1Img from '../images/elena/elena1.webp'
+import elena8EyeImg from '../images/elena/elena8Eye.webp'
+import elena1MapImg from '../images/elena/elena1Map.webp'
+import elena5TramImg from '../images/elena/elena5Tram.webp'
 import elena4TrainGif from '../images/elena/elena4Train.gif'
-import elena2FamilyImg from '../images/elena/elena2Family.png'
-import elena7FriendImg from '../images/elena/elena7Friend.png'
-import elena8EyeImg from '../images/elena/elena8Eye.png'
-import elena1MapImg from '../images/elena/elena1Map.png'
-import elena3ApocalypseImg from '../images/elena/elena3Apocalypse.png'
-import elena6DaughterImg from '../images/elena/elena6Daughter.png'
+import elena2FamilyImg from '../images/elena/elena2Family.webp'
+import elena7FriendImg from '../images/elena/elena7Friend.webp'
+import elena6DaughterImg from '../images/elena/elena6Daughter.webp'
+import elena3ApocalypseImg from '../images/elena/elena3Apocalypse.webp'
 
 const it = {
   paragraph1: 'ho 38 anni e questa è la mia storia di <span>fuga dall\'Ucraina</span> nel 2022, in cerca di una vita migliore in Italia.',
@@ -63,7 +63,7 @@ const Kito = ({ selectedLang }) => {
   let lang = selectedLang ? en : it
   return (
     <>
-      <Box sx={{ width: '100%', paddingX: 6, paddingY: 10, boxSizing: 'border-box' }}>
+      <Box sx={{ width: '100%', paddingX: 3, paddingY: 10, boxSizing: 'border-box' }}>
         {SlideIntro('ELENA', elena1MapImg, elena1Img, lang.paragraph1)}
         {SlideR(lang.paragraph2, elena2FamilyImg)}
         {SlideR(lang.paragraph3, elena3ApocalypseImg)}

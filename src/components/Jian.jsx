@@ -54,7 +54,7 @@ const Jian = ({ selectedLang }) => {
   let lang = selectedLang ? en : it
   return (
     <>
-      <Box sx={{ width: '100%', paddingX: 6, paddingY: 10, boxSizing: 'border-box' }}>
+      <Box sx={{ width: '100%', paddingX: 3, paddingY: 10, boxSizing: 'border-box' }}>
         {SlideIntro('JIAN LI', jian1MapImg, jian1Img, lang.paragraph1)}
         {SlideR(lang.paragraph2, jian2FamilyImg)}
         {SlideR(lang.paragraph3, jian3TownImg)}
