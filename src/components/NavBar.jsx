@@ -43,9 +43,9 @@ const NavBar = ({ route, setRoute, selectedLang, setSelectedLang }) => {
       }}
     >
       <Button onClick={() => setRoute('')}>
-        <img src={route ? logoLight : logoDark} alt="im-migration logo" style={{ width: 150 }} />
+        <img src={route ? logoLight : logoDark} alt="im-migration logo" style={{ width: 130 }} />
       </Button>
-      <IconButton sx={{ fontSize: 50 }} onClick={() => setOpenDrawer(true)}>
+      <IconButton sx={{ fontSize: 30 }} onClick={() => setOpenDrawer(true)}>
         <GiHamburgerMenu style={{ color: 'var(--red)' }}/>
       </IconButton>
       <Drawer anchor={'right'} open={openDrawer} onClose={() => setOpenDrawer(false)}>
