@@ -5,10 +5,10 @@ import klevis1Img from '../images/klevis/klevis1.webp'
 import klevis1MapImg from '../images/klevis/klevis1Map.webp'
 import klevis2KidImg from '../images/klevis/klevis2Kid.webp'
 import klevis5SeaImg from '../images/klevis/klevis5Sea.webp'
+import klevis4BoatGif from '../images/klevis/klevis4Boat.gif'
 import klevis3ShipImg from '../images/klevis/klevis3Ship.webp'
 import klevis8HomeImg from '../images/klevis/klevis8Home.webp'
 import klevis7QueueImg from '../images/klevis/klevis7Queue.webp'
-import klevis4ButtonGif from '../images/klevis/klevis4Button.gif'
 import klevis6StadiumImg from '../images/klevis/klevis6Stadium.webp'
 
 const it = {
@@ -62,7 +62,7 @@ const Klevis = ({ selectedLang }) => {
         {SlideIntro('KLEVIS', klevis1MapImg, klevis1Img, lang.paragraph1)}
         {SlideR(lang.paragraph2, klevis2KidImg)}
         {SlideR(lang.paragraph3, klevis3ShipImg)}
-        {SlideGif(klevis4ButtonGif)}
+        {SlideGif(klevis4BoatGif)}
         {SlideL(lang.paragraph4, klevis5SeaImg)}
         {SlideR(lang.paragraph5, klevis6StadiumImg)}
         {SlideR(lang.paragraph6, klevis7QueueImg)}
