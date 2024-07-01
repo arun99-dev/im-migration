@@ -63,7 +63,7 @@ const NavBar = ({ route, setRoute, selectedLang, setSelectedLang }) => {
             <ListItem>
               <ListItemButton onClick={() => window.open('https://shorturl.at/Q18xZ', '_blank')}>
                 <IoIosCall color='var(--red)' />
-                <ListItemText primary={selectedLang ? 'Anti-Racism Number' : 'Numero Antidiscriminazione'} sx={{ marginLeft: 2 }} />
+                <ListItemText primary={selectedLang ? 'Anti-Racism Number' : 'Numero Verde Antidiscriminazione'} sx={{ marginLeft: 2 }} />
               </ListItemButton>
             </ListItem>
             <ListItem>
@@ -84,7 +84,7 @@ const NavBar = ({ route, setRoute, selectedLang, setSelectedLang }) => {
               </List>
             </Collapse>
             <ListItem sx={{ position: 'fixed', bottom: 0 }}>
-              <ListItemButton onClick={() => window.open('https://shorturl.at/eLNev', '_blank')}>
+              <ListItemButton onClick={() => window.open('https://shorturl.at/XoCVj', '_blank')}>
                 <BiSolidDonateHeart color='var(--red)' />
                 <ListItemText primary={selectedLang ? 'Donate' : 'Dona'} sx={{ marginLeft: 2 }} />
               </ListItemButton>
