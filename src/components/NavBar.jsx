@@ -19,7 +19,7 @@ import { IoIosCall, IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
 import logoDark from '../images/logoDark.webp'
 import logoLight from '../images/logoLight.webp'
 
-const NavBar = ({ selectedSoul, selectedLang, setSelectedLang }) => {
+const NavBar = ({ route, selectedLang, setSelectedLang }) => {
   const [openDrawer, setOpenDrawer] = useState(false)
   const [openMenu, setOpenMenu] = useState(true)
   const toggleLang = (lang) => () => {
@@ -39,11 +39,11 @@ const NavBar = ({ selectedSoul, selectedLang, setSelectedLang }) => {
         position: 'fixed',
         top: 0,
         zIndex: 1,
-        background: selectedSoul ? 'var(--dark)' : 'none'
+        background: route ? 'var(--dark)' : 'none'
       }}
     >
       <Button onClick={() => window.location.reload()}>
-        <img src={selectedSoul ? logoLight : logoDark} alt="im-migration logo" style={{ width: 150 }} />
+        <img src={route ? logoLight : logoDark} alt="im-migration logo" style={{ width: 150 }} />
       </Button>
       <IconButton sx={{ fontSize: 50 }} onClick={() => setOpenDrawer(true)}>
         <RiMenuLine style={{ color: 'var(--red)' }}/>

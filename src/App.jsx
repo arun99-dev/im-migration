@@ -12,18 +12,18 @@ import Scroll from './components/Scroll.jsx'
 import './App.css'
 
 const App = () => {
+  const [route, setRoute] = useState('')
   const [selectedLang, setSelectedLang] = useState(0)
-  const [selectedSoul, setSelectedSoul] = useState('')
   return (
     <>
-      <Scroll />
-      <Navbar selectedSoul={selectedSoul} selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
-      {!selectedSoul && <Home selectedLang={selectedLang} setSelectedSoul={setSelectedSoul} />}
-      {selectedSoul === 'klevis' && <Klevis selectedLang={selectedLang} />}
-      {selectedSoul === 'ana' && <Ana selectedLang={selectedLang} />}
-      {selectedSoul === 'kito' && <Kito selectedLang={selectedLang} />}
-      {selectedSoul === 'elena' && <Elena selectedLang={selectedLang} />}
-      {selectedSoul === 'jian' && <Jian selectedLang={selectedLang} />}
+      {route && <Scroll />}
+      <Navbar route={route} selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
+      {!route && <Home selectedLang={selectedLang} setRoute={setRoute} />}
+      {route === 'klevis' && <Klevis selectedLang={selectedLang} />}
+      {route === 'ana' && <Ana selectedLang={selectedLang} />}
+      {route === 'kito' && <Kito selectedLang={selectedLang} />}
+      {route === 'elena' && <Elena selectedLang={selectedLang} />}
+      {route === 'jian' && <Jian selectedLang={selectedLang} />}
     </>
   )
 }
