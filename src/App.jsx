@@ -17,7 +17,7 @@ const App = () => {
   const [selectedLang, setSelectedLang] = useState(0)
   return (
     <>
-      {route && <Scroll />}
+      {route && route !== 'aboutUs' && <Scroll />}
       <Navbar route={route} setRoute={setRoute} selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
       {!route && <Home selectedLang={selectedLang} setRoute={setRoute} />}
       {route === 'klevis' && <Klevis selectedLang={selectedLang} />}
