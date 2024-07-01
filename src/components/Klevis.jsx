@@ -1,15 +1,15 @@
 import { Box } from '@mui/material'
 import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
 
-import klevis1Img from '../images/klevis/klevis1.png'
-import klevis1MapImg from '../images/klevis/klevis1Map.png'
-import klevis2KidImg from '../images/klevis/klevis2Kid.png'
-import klevis5SeaImg from '../images/klevis/klevis5Sea.png'
-import klevis3ShipImg from '../images/klevis/klevis3Ship.png'
-import klevis8HomeImg from '../images/klevis/klevis8Home.png'
-import klevis7QueueImg from '../images/klevis/klevis7Queue.png'
+import klevis1Img from '../images/klevis/klevis1.webp'
+import klevis1MapImg from '../images/klevis/klevis1Map.webp'
+import klevis2KidImg from '../images/klevis/klevis2Kid.webp'
+import klevis5SeaImg from '../images/klevis/klevis5Sea.webp'
+import klevis3ShipImg from '../images/klevis/klevis3Ship.webp'
+import klevis8HomeImg from '../images/klevis/klevis8Home.webp'
+import klevis7QueueImg from '../images/klevis/klevis7Queue.webp'
 import klevis4ButtonGif from '../images/klevis/klevis4Button.gif'
-import klevis6StadiumImg from '../images/klevis/klevis6Stadium.png'
+import klevis6StadiumImg from '../images/klevis/klevis6Stadium.webp'
 
 const it = {
   paragraph1: 'e questa è la mia storia di <span>fuga dall\'Albania</span> nel <span>1991</span>, quando avevo solo 12 anni. La mia famiglia ha preso una decisione che ha segnato il nostro futuro: salire a bordo della <span>nave Vlora</span> e intraprendere un <span>viaggio verso l\'Italia</span>, in cerca di una <span>nuova vita</span>.',

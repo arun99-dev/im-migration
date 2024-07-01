@@ -1,6 +1,6 @@
-import { Box } from '@mui/material'
-
 import parse from 'html-react-parser'
+
+import { Box } from '@mui/material'
 
 export const SlideR = (p, img) => {
   return (

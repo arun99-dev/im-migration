@@ -1,15 +1,15 @@
 import { Box } from '@mui/material'
 import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
 
-import kito1Img from '../images/kito/kito1.png'
-import kito5SeaImg from '../images/kito/kito5Sea.png'
+import kito1Img from '../images/kito/kito1.webp'
 import kito4CarGif from '../images/kito/kito4Car.gif'
-import kito2KidsImg from '../images/kito/kito2Kids.png'
-import kito7CampImg from '../images/kito/kito7Camp.png'
-import kito8BackImg from '../images/kito/kito8Back.png'
-import kito1MapImg from '../images/kito/kito1Map.png'
-import kito3WorkerImg from '../images/kito/kito3Worker.png'
-import kito6GangRaftImg from '../images/kito/kito6GangRaft.png'
+import kito1MapImg from '../images/kito/kito1Map.webp'
+import kito5SeaImg from '../images/kito/kito5Sea.webp'
+import kito2KidsImg from '../images/kito/kito2Kids.webp'
+import kito7CampImg from '../images/kito/kito7Camp.webp'
+import kito8BackImg from '../images/kito/kito8Back.webp'
+import kito3WorkerImg from '../images/kito/kito3Worker.webp'
+import kito6GangRaftImg from '../images/kito/kito6GangRaft.webp'
 
 const it = {
   paragraph1: 'e questa è la mia storia di <span>fuga dal Congo</span>, nel 2020, in cerca di una vita migliore in Europa.',

@@ -15,8 +15,8 @@ import { HiTranslate } from "react-icons/hi"
 import { BsInfoCircleFill } from 'react-icons/bs'
 import { IoIosCall, IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
 
-import logoDark from '../images/logoDark.png'
-import logoLight from '../images/logoLight.png'
+import logoDark from '../images/logoDark.webp'
+import logoLight from '../images/logoLight.webp'
 
 const NavBar = ({ selectedSoul, selectedLang, setSelectedLang }) => {
   const [openDrawer, setOpenDrawer] = useState(false)

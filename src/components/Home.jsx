@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
 import { Box, Button } from '@mui/material'
 
-import ana from '../images/polaroid/ana.png'
-import kito from '../images/polaroid/kito.png'
-import elena from '../images/polaroid/elena.png'
-import background from '../images/background.png'
-import jian from '../images/polaroid/jian.png'
-import klevis from '../images/polaroid/klevis.png'
+import ana from '../images/polaroid/ana.webp'
+import kito from '../images/polaroid/kito.webp'
+import jian from '../images/polaroid/jian.webp'
+import elena from '../images/polaroid/elena.webp'
+import background from '../images/background.webp'
+import klevis from '../images/polaroid/klevis.webp'
 
 const Home = ({ selectedLang, setSelectedSoul }) => {
   return (

@@ -1,16 +1,16 @@
 import { Box } from '@mui/material'
 import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
 
-import jian1Img from '../images/jian/jian1.png'
-import jian1MapImg from '../images/jian/jian1Map.png'
-import jian9JobImg from '../images/jian/jian9Job.png'
-import jian3TownImg from '../images/jian/jian3Town.png'
-import jian7TeenImg from '../images/jian/jian7Teen.png'
+import jian1Img from '../images/jian/jian1.webp'
+import jian1MapImg from '../images/jian/jian1Map.webp'
+import jian9JobImg from '../images/jian/jian9Job.webp'
 import jian4CCTVGif from '../images/jian/jian4CCTV.gif'
-import jian2FamilyImg from '../images/jian/jian2Family.png'
-import jian5DiningImg from '../images/jian/jian5Dining.png'
-import jian6StreetImg from '../images/jian/jian6Street.png'
-import jian8EmployeeImg from '../images/jian/jian8Employee.png'
+import jian3TownImg from '../images/jian/jian3Town.webp'
+import jian7TeenImg from '../images/jian/jian7Teen.webp'
+import jian2FamilyImg from '../images/jian/jian2Family.webp'
+import jian5DiningImg from '../images/jian/jian5Dining.webp'
+import jian6StreetImg from '../images/jian/jian6Street.webp'
+import jian8EmployeeImg from '../images/jian/jian8Employee.webp'
 
 const it = {
   paragraph1: 'ho <span>42 anni</span> e questa è la mia storia di <span>fuga dalla Cina</span> nel 1998, <span>in cerca di una vita migliore</span> in Europa.',
