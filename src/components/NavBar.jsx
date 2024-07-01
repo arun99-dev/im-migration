@@ -56,19 +56,19 @@ const NavBar = ({ selectedSoul, selectedLang, setSelectedLang }) => {
             <ListItem>
               <ListItemButton>
                 <BsInfoCircleFill color='var(--red)' />
-                <ListItemText primary={'Chi Siamo?'} sx={{ marginLeft: 2 }} />
+                <ListItemText primary={selectedLang ? 'About Us' : 'Chi Siamo?'} sx={{ marginLeft: 2 }} />
               </ListItemButton>
             </ListItem>
             <ListItem>
               <ListItemButton onClick={() => window.open('https://shorturl.at/Q18xZ', '_blank')}>
                 <IoIosCall color='var(--red)' />
-                <ListItemText primary={'Numero Anti-Razzismo'} sx={{ marginLeft: 2 }} />
+                <ListItemText primary={selectedLang ? 'Anti-Racism Number' : 'Numero Antidiscriminazione'} sx={{ marginLeft: 2 }} />
               </ListItemButton>
             </ListItem>
             <ListItem>
               <ListItemButton onClick={() => setOpenMenu(!openMenu)}>
                 <HiTranslate />
-                <ListItemText primary='Translate' sx={{ marginLeft: 2 }} />
+                <ListItemText primary={selectedLang ? 'Translate' : 'Traduci'} sx={{ marginLeft: 2 }} />
                 {openMenu ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
               </ListItemButton>
             </ListItem>
