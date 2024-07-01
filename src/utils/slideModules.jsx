@@ -17,7 +17,7 @@ export const SlideIntro = (name, mapImg, soulImg, intro) => {
         <motion.img
           src={mapImg} alt="journey image" style={{ height: '100%', position: 'absolute', top: 0, right: 0, zIndex: -1 }}
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1, transition: { duration: 2 } }}
+          whileInView={{ opacity: 1, transition: { duration: 2, delay: 1 } }}
         />
         <motion.img
           src={soulImg} alt="journey image" style={{ width: '50vw', maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 80%, transparent 100%' }}
