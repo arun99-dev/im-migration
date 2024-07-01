@@ -43,7 +43,7 @@ const en = {
 }
 
 const Ana = ({ selectedLang }) => {
-  let lang = selectedLang ? en : it
+  const lang = selectedLang ? en : it
   return (
     <>
       <Box sx={{ width: '100%', paddingX: 3, paddingY: 10, boxSizing: 'border-box' }}>
