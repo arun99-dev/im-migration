@@ -14,13 +14,13 @@ const Home = ({ selectedLang, setRoute }) => {
     <Box
       sx={{
         height: '100vh',
-        padding: 15,
+        padding: 10,
         boxSizing: 'border-box',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexWrap: 'wrap',
-        gap: '50px',
+        gap: '5vw',
         backgroundImage:`url(${background})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -31,10 +31,11 @@ const Home = ({ selectedLang, setRoute }) => {
       {[klevis, ana, kito, elena, jian].map((img, index) => (
         <Button
           key={index}
-          onClick={() => setRoute(img.split('/').pop().split(img.includes('-') ? '-' : '.')[0])}
+          sx={{ transform: index % 2 ? 'rotate(-3deg)' : 'rotate(3deg)'}}
           component={motion.button}
           whileHover={{ scale: 1.1, transition: { duration: .1 } }}
           whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
+          onClick={() => setRoute(img.split('/').pop().split(img.includes('-') ? '-' : '.')[0])}
         >
           <img src={img} alt="polaroid" style={{ width: '20vh' }} />
         </Button>
