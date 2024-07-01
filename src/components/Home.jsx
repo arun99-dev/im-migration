@@ -32,8 +32,8 @@ const Home = ({ selectedLang, setRoute }) => {
         <Button
           key={index}
           component={motion.button}
-          initial={{ scale: 0, rotate: 720, opacity: 0 }}
-          whileInView={{ scale: 1,  rotate: Math.floor(Math.random() * 2) ? -3 : 3, opacity: 1, transition: { duration: .5 } }}
+          initial={{ translateY: 100, rotate: Math.floor(Math.random() * 2) ? -3 : 3, opacity: 0 }}
+          whileInView={{ translateY: 0, opacity: 1, transition: { duration: .5, delay: (index / 10) } }}
           whileHover={{ scale: 1.1, transition: { duration: .1 } }}
           whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
           onClick={() => setRoute(img.split('/').pop().split(img.includes('-') ? '-' : '.')[0])}
