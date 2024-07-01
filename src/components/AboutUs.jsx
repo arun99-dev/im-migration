@@ -31,7 +31,7 @@ const Team = (name, surname, url, dev) => {
     <ListItem
       style={{ justifyContent: !dev && 'end' }}
       component={motion.div}
-      initial={{ translateX: dev ? -400 : 400, opacity: 0 }}
+      initial={{ translateX: dev ? -200 : 200, opacity: 0 }}
       whileInView={{ translateX: 0, opacity: 1, transition: { duration: 1 } }}
     >
       {dev && <IconButton onClick={() => window.open(url, '_blank')}><BiLogoInstagramAlt style={{ fontSize: '3vw', color: 'var(--dark)' }}/></IconButton>}
