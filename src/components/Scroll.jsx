@@ -8,10 +8,16 @@ const Scroll = () => {
     const position = window.pageYOffset
     setScrollPosition(position)
   }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => {window.removeEventListener('scroll', handleScroll)}
   }, [])
+
+  const handleClick = (e) => {
+    window.scrollTo({top: 0, behavior: 'smooth'})
+    e.currentTarget.blur()
+  }
 
   return (
     <IconButton
@@ -30,7 +36,7 @@ const Scroll = () => {
           background: 'var(--red)'
         },
       }}
-      onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+      onClick={(e) => handleClick(e)}
     >
       <BsArrowUpCircleFill style={{ fontSize: 100, color: 'white' }} />
     </IconButton>

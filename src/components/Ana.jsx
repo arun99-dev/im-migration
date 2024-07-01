@@ -1,6 +1,5 @@
 import { Box } from '@mui/material'
 import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
-import Scroll from './Scroll.jsx'
 
 import ana1Img from '../images/ana/ana1.webp'
 import ana1MapImg from '../images/ana/ana1Map.webp'
@@ -47,7 +46,6 @@ const Ana = ({ selectedLang }) => {
   let lang = selectedLang ? en : it
   return (
     <>
-      <Scroll />
       <Box sx={{ width: '100%', paddingX: 3, paddingY: 10, boxSizing: 'border-box' }}>
         {SlideIntro('ANA', ana1MapImg, ana1Img, lang.paragraph1)}
         {SlideR(lang.paragraph2, ana2DadImg)}

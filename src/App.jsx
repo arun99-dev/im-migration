@@ -7,6 +7,7 @@ import Jian from './components/Jian.jsx'
 import Elena from './components/Elena.jsx'
 import Klevis from './components/Klevis.jsx'
 import Navbar from './components/NavBar.jsx'
+import Scroll from './components/Scroll.jsx'
 
 import './App.css'
 
@@ -15,6 +16,7 @@ const App = () => {
   const [selectedSoul, setSelectedSoul] = useState('')
   return (
     <>
+      <Scroll />
       <Navbar selectedSoul={selectedSoul} selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
       {!selectedSoul && <Home selectedLang={selectedLang} setSelectedSoul={setSelectedSoul} />}
       {selectedSoul === 'klevis' && <Klevis selectedLang={selectedLang} />}
