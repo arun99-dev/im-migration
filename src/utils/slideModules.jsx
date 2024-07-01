@@ -6,7 +6,7 @@ export const SlideIntro = (name, mapImg, soulImg, intro) => {
   return (
     <>
       <Box sx={{ height: '50vh', display: 'flex', flexDirection: 'column', alignItems: 'center', fontWeight: 700 }}>
-        <p style={{ width: '100%', fontSize: '20vw', margin: 0, textAlign: 'center' }}>{name}</p>
+        <p style={{ width: '100%', fontSize: '20vw', margin: 0, textAlign: 'end' }}>{name}</p>
       </Box>
       <Box sx={{ height: '50vh', marginBottom: 50, display: 'flex', alignItems: 'center', position: 'relative' }}>
         <img src={mapImg} alt="journey image" style={{ height: '100%', position: 'absolute', top: 0, right: 0, zIndex: -1 }} />
@@ -19,7 +19,7 @@ export const SlideIntro = (name, mapImg, soulImg, intro) => {
 
 export const SlideR = (p, img) => {
   return (
-    <Box sx={{ height: '100vh', paddingY: 50, display: 'flex', alignItems: 'center' }}>
+    <Box sx={{ height: '100vh', paddingY: 25, display: 'flex', alignItems: 'center' }}>
       <p style={{ fontSize: '2vw', marginRight: '5vw' }}>{parse(p)}</p>
       <img src={img} alt="journey image" style={{ width: '40vw' }}/>
     </Box>
@@ -28,7 +28,7 @@ export const SlideR = (p, img) => {
 
 export const SlideL = (p, img) => {
   return (
-    <Box sx={{ height: '100vh', paddingY: 50, display: 'flex', alignItems: 'center' }}>
+    <Box sx={{ height: '100vh', paddingY: 25, display: 'flex', alignItems: 'center' }}>
       <img src={img} alt="journey image" style={{ width: '40vw' }}/>
       <p style={{ fontSize: '2vw', marginLeft: '5vw' }}>{parse(p)}</p>
     </Box>
