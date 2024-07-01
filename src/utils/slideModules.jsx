@@ -56,7 +56,7 @@ export const SlideL = (p, img) => {
     <Box sx={{ height: '100vh', paddingY: 25, display: 'flex', alignItems: 'center' }}>
       <motion.img
         src={img} alt="journey image" style={{ width: '40vw' }}
-        initial={{ translateX: -400, opacity: 0 }}
+        initial={{ translateX: '-40vw', opacity: 0 }}
         whileInView={{ translateX: 0 , opacity: 1, transition: { duration: .5 } }}
       />
       <motion.p
@@ -85,7 +85,7 @@ export const SlideStat = (title, desc, source) => {
     <Box sx={{ width: '100%', height: '100vh', padding: '0 2rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'var(--red)' }}>
       <motion.p
         style={{ width: '80%', margin: 0, fontSize: '10vw', fontWeight: 700, textAlign: 'start' }}
-        initial={{ translateX: -400, opacity: 0 }}
+        initial={{ translateX: '-40vw', opacity: 0 }}
         whileInView={{ translateX: 0 , opacity: 1, transition: { duration: .5 } }}
       >{title}</motion.p>
       <motion.p
