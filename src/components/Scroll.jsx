@@ -39,7 +39,7 @@ const Scroll = () => {
       }}
       onClick={(e) => handleClick(e)}
     >
-      <BsArrowUpCircleFill style={{ fontSize: 100, color: 'white' }} />
+      <BsArrowUpCircleFill style={{ fontSize: 80, color: 'white' }} />
     </IconButton>
   )
 }
