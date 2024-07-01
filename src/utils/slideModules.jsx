@@ -45,7 +45,7 @@ export const SlideGif = (gif) => {
 
 export const SlideStat = (title, desc, source) => {
   return (
-    <Box sx={{ width: '100%', height: '100vh', padding: '0 2rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'hsla(357.29, 92.248%, 45.935%)' }}>
+    <Box sx={{ width: '100%', height: '100vh', padding: '0 2rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'var(--red)' }}>
       <p style={{ width: '80%', margin: 0, fontSize: '10vw', fontWeight: 700, textAlign: 'start' }}>{title}</p>
       <p style={{ width: '80%', margin: 0, fontSize: '2vw', fontWeight: 600, textAlign: 'end' }}>{desc}</p>
       <p style={{ width: '80%', margin: 0, marginTop: 5, fontSize: '1vw', textAlign: 'end' }}>{source}</p>
@@ -56,10 +56,10 @@ export const SlideStat = (title, desc, source) => {
 export const SlideOutro = (dataDesc, title, desc) => {
   return (
     <>
-      <Box sx={{ width: '100%', height: '100vh', padding: '0 2rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'hsla(357.29, 92.248%, 45.935%)' }}>
+      <Box sx={{ width: '100%', height: '100vh', padding: '0 2rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'var(--red)' }}>
         <p style={{ width: '50%', margin: 0, fontSize: '2vw', fontWeight: 700, textAlign: 'center' }}>{dataDesc}</p>
       </Box>
-      <Box sx={{ width: '100%', height: '100vh', padding: '0 2rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'hsla(357.29, 92.248%, 45.935%)' }}>
+      <Box sx={{ width: '100%', height: '100vh', padding: '0 2rem', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'var(--red)' }}>
         <p style={{ margin: 0, fontSize: '15vw', fontWeight: 700 }}>{title}</p>
         <p style={{ margin: 0, fontSize: '5vw' }}>{desc}</p>
       </Box>

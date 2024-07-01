@@ -8,6 +8,7 @@ import Elena from './components/Elena.jsx'
 import Klevis from './components/Klevis.jsx'
 import Navbar from './components/NavBar.jsx'
 import Scroll from './components/Scroll.jsx'
+import AboutUs from './components/AboutUs.jsx'
 
 import './App.css'
 
@@ -17,13 +18,14 @@ const App = () => {
   return (
     <>
       {route && <Scroll />}
-      <Navbar route={route} selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
+      <Navbar route={route} setRoute={setRoute} selectedLang={selectedLang} setSelectedLang={setSelectedLang} />
       {!route && <Home selectedLang={selectedLang} setRoute={setRoute} />}
       {route === 'klevis' && <Klevis selectedLang={selectedLang} />}
       {route === 'ana' && <Ana selectedLang={selectedLang} />}
       {route === 'kito' && <Kito selectedLang={selectedLang} />}
       {route === 'elena' && <Elena selectedLang={selectedLang} />}
       {route === 'jian' && <Jian selectedLang={selectedLang} />}
+      {route === 'aboutUs' && <AboutUs selectedLang={selectedLang} />}
     </>
   )
 }
