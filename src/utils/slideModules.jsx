@@ -8,7 +8,7 @@ export const SlideIntro = (name, mapImg, soulImg, intro) => {
       <Box sx={{ height: '50vh', display: 'flex', flexDirection: 'column', alignItems: 'center', fontWeight: 700 }}>
         <p style={{ width: '100%', fontSize: '20vw', margin: 0, textAlign: 'center' }}>{name}</p>
       </Box>
-      <Box sx={{ height: '50vh', display: 'flex', alignItems: 'center', position: 'relative' }}>
+      <Box sx={{ height: '50vh', marginBottom: 50, display: 'flex', alignItems: 'center', position: 'relative' }}>
         <img src={mapImg} alt="journey image" style={{ height: '100%', position: 'absolute', top: 0, right: 0, zIndex: -1 }} />
         <img src={soulImg} alt="journey image" style={{ width: '50vw', maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 80%, transparent 100%' }} />
         <p style={{ fontSize: '2vw' }}>{parse(intro)}</p>
@@ -37,7 +37,7 @@ export const SlideL = (p, img) => {
 
 export const SlideGif = (gif) => {
   return (
-    <Box>
+    <Box sx={{ height: '100vh', display: 'grid', placeItems: 'center' }}>
       <img src={gif} alt="journey image" style={{ width: '100%' }}/>
     </Box>
   )
