@@ -27,7 +27,7 @@ const it = {
   paragraph12: '2% del PIL italiano',
   paragraph13: 'è contribuito dagli immigrati cinesi',
   paragraph14: 'ISTAT 2022',
-  paragraph15: 'La storia di Jian Li è una delle molte testimonianze dell\'emigrazione cinese in Italia. Nonostante le difficoltà, è riuscito a costruire una vita migliore nel loro nuovo paese. È importante riconoscere che i lavoratori cinesi contribuiscono significativamente all\'economia italiana, rappresentando il 2% del PIL annuale. Questo non solo supporta la crescita economica, ma arricchisce anche il tessuto sociale e culturale dell\'Italia, dimostrando il valore dell\'immigrazione come risorsa positiva per entrambi i paesi.',
+  paragraph15: 'La storia di Jian Li è una delle molte testimonianze dell\'emigrazione cinese in Italia. Nonostante le difficoltà, è riuscito a costruire una vita migliore nel loro nuovo paese. È importante riconoscere che i lavoratori cinesi contribuiscono significativamente all\'economia italiana, rappresentando il 2% del PIL annuale. Questo non solo supporta la crescita economica, ma arricchisce anche il tessuto sociale e culturale dell\'Italia, dimostrando il valore dell\'immigrazione come risorsa positiva per il nostro paese.',
   paragraph16: 'uno di tanti'
 }
 
@@ -46,7 +46,7 @@ const en = {
   paragraph12: '2% of Italian GDP',
   paragraph13: 'is contributed by Chinese immigrants',
   paragraph14: 'ISTAT 2022',
-  paragraph15: 'Jian Li\'s story is one of many testimonies of Chinese emigration to Italy. Despite the difficulties, he managed to build a better life in their new country. It is important to recognize that Chinese workers contribute significantly to the Italian economy, accounting for 2% of annual GDP. This not only supports economic growth , but it also enriches the social and cultural fabric of Italy, demonstrating the value of immigration as a positive resource for both countries.',
+  paragraph15: 'Jian Li\'s story is one of many testimonies of Chinese emigration to Italy. Despite the difficulties, he managed to build a better life in their new country. It is important to recognize that Chinese workers contribute significantly to the Italian economy, accounting for 2% of annual GDP. This not only supports economic growth , but it also enriches the social and cultural fabric of Italy, demonstrating the value of immigration as a positive resource for our country.',
   paragraph16: 'one of many'
 }
 
