@@ -44,7 +44,7 @@ export const SlideR = (p, img) => {
       >{parse(p)}</motion.p>
       <motion.img
         src={img} alt="journey image" style={{ width: '40vw' }}
-        initial={{ translateX: 400, opacity: 0 }}
+        initial={{ translateX: '40vw', opacity: 0 }}
         whileInView={{ translateX: 0 , opacity: 1, transition: { duration: .5 } }}
       />
     </Box>
@@ -90,7 +90,7 @@ export const SlideStat = (title, desc, source) => {
       >{title}</motion.p>
       <motion.p
         style={{ width: '80%', margin: 0, fontSize: '2vw', fontWeight: 600, textAlign: 'end' }}
-        initial={{ translateX: 400, opacity: 0 }}
+        initial={{ translateX: 300, opacity: 0 }}
         whileInView={{ translateX: 0 , opacity: 1, transition: { duration: .5 } }}
       >{desc}</motion.p>
       <motion.p
