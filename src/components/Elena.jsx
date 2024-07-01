@@ -1,5 +1,4 @@
-import { Box } from '@mui/material'
-import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
+import { Slide, SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
 
 import elena1Img from '../images/elena/elena1.webp'
 import elena8EyeImg from '../images/elena/elena8Eye.webp'
@@ -38,11 +37,11 @@ const it = {
 const en = {
   paragraph1: 'I\'m 38 years old and this is my story of <span>escape from Ukraine</span> in 2022, in search of a better life in Italy.',
   paragraph2: 'I am originally from <span>Marganets</span>, a city near Nikopol and Zaporozhye, in south-eastern Ukraine. I lived there with my <span>husband</span>, our <span>two daughters</span> and <span>the cat</span> Malinka. Marganets was our home, a place of memories and affections.',
-  paragraph3: 'On February 24, 2022, the <span>Russian invasion</span>of Ukraine changed everything. The missiles, the shelters, the bombs: my memories are mixed up in a chaos of fear and destruction. A few hours after the invasion began, I decided to <span>leave with my daughters</span> and Malinka. My husband stayed at home, as did my sisters and their children.',
+  paragraph3: 'On February 24, 2022, the <span>Russian invasion</span> of Ukraine changed everything. The missiles, the shelters, the bombs: my memories are mixed up in a chaos of fear and destruction. A few hours after the invasion began, I decided to <span>leave with my daughters</span> and Malinka. My husband stayed at home, as did my sisters and their children.',
   paragraph4: 'We took a <span>train</span> to Zaporižžja, then to Lviv, and finally we left the country from the Polish border. I remember the trains full of people, the queues to get on the carriages and all the displaced people from Mariupol on the first train to Zaporižžja. The decision to leave was made in two hours. I wanted to stay in <span>Poland</span>, but <span>there was no more room</span>, so they put us on a <span>coach</span> and brought to Italy, to Pontecorvo, in the <span>province of Frosinone</span>.',
   paragraph5: 'When we arrived in Italy, I didn\'t know anyone. A man <span>offered us a studio apartment</span>, <span>Caritas</span> brought us the shopping and I was able to benefit from the government contribution Italian for the first three months. My youngest children went to school, while the eldest, who was studying law in Ukraine, worked online for a Ukrainian call center. I <span>wasn\'t able to find a job</span> because the town where we were staying was too small and I didn\'t speak Italian. But at the beginning of February, almost a year after the war began, the man who was hosting us asked us to pay the rent. "<span >Either you pay, or you leave</span>", he told us.',
-  paragraph6: 'I realized that I wouldn\'t be able to<span>pay the rent</span>, so we left Pontecorvo. We picked up the cat again and went to Rome: a woman, two girls and their cat.<span>We started all over again</span> a year after fleeing Ukraine. We took a <span>train</span> and asked for help at the hotel Capannelle, a <span>first reception hub</span> set up by the Protection civilian to <span>host the Ukrainians in the emergency</span>. This hotel should already be closed, but it continues to operate because the arrivals are not finished and many people like us are not settled yet.',
-  paragraph7: 'Now that I\'ve moved into the hotel, it\'s not so much my future or that of my daughters that I\'m worried about. What really torments me is the situation of those who remained at home: <span>my head is still in Ukraine</span>. I am thinking of returning to Ukraine to take and bring with me to Italy my nephews, the children of my sisters. This would make me feel useful and<span>would alleviate the sense of guilt</span> that I feel for having left, even though my city is still on the line of forehead.',
+  paragraph6: 'I realized that I wouldn\'t be able to<span> pay the rent</span>, so we left Pontecorvo. We picked up the cat again and went to Rome: a woman, two girls and their cat.<span> We started all over again</span> a year after fleeing Ukraine. We took a <span>train</span> and asked for help at the hotel Capannelle, a <span>first reception hub</span> set up by the Protection civilian to <span>host the Ukrainians in the emergency</span>. This hotel should already be closed, but it continues to operate because the arrivals are not finished and many people like us are not settled yet.',
+  paragraph7: 'Now that I\'ve moved into the hotel, it\'s not so much my future or that of my daughters that I\'m worried about. What really torments me is the situation of those who remained at home: <span>my head is still in Ukraine</span>. I am thinking of returning to Ukraine to take and bring with me to Italy my nephews, the children of my sisters. This would make me feel useful and<span> would alleviate the sense of guilt</span> that I feel for having left, even though my city is still on the line of forehead.',
   paragraph8: '6.5 million',
   paragraph9: 'of Ukrainian refugees who have sought refuge outside their country',
   paragraph10: 'UNHCR Data Report 2024',
@@ -55,7 +54,7 @@ const en = {
   paragraph17: 'Socioeconomic analysis survey of the Ukrainian population arriving in Italy since February 2022',
   paragraph18: '30% Ukrainians in Italy',
   paragraph19: 'of working age he speaks Italian',
-  paragraph20: 'From these data it emerges thatElena\'s story represents one of the many testimonies of Ukrainian refugees inItaly. Despite the challenges and the need for humanitarian aid, refugees demonstrate a strong will to integrate and rebuild a better life. The Ukrainian community in Italy is composed mostly of educated people, ready to face the difficulties of adaptation.',
+  paragraph20: 'From these data it emerges that Elena\'s story represents one of the many testimonies of Ukrainian refugees inItaly. Despite the challenges and the need for humanitarian aid, refugees demonstrate a strong will to integrate and rebuild a better life. The Ukrainian community in Italy is composed mostly of educated people, ready to face the difficulties of adaptation.',
   paragraph21: 'one of many'
 }
 
@@ -63,7 +62,7 @@ const Kito = ({ selectedLang }) => {
   const lang = selectedLang ? en : it
   return (
     <>
-      <Box sx={{ width: '100%', paddingX: 3, paddingY: 10, boxSizing: 'border-box' }}>
+      <Slide>
         {SlideIntro('ELENA', elena1MapImg, elena1Img, lang.paragraph1)}
         {SlideR(lang.paragraph2, elena2FamilyImg)}
         {SlideR(lang.paragraph3, elena3ApocalypseImg)}
@@ -72,7 +71,7 @@ const Kito = ({ selectedLang }) => {
         {SlideR(lang.paragraph5, elena6DaughterImg)}
         {SlideR(lang.paragraph6, elena7FriendImg)}
         {SlideL(lang.paragraph7, elena8EyeImg)}
-      </Box>
+      </Slide>
       {SlideStat(lang.paragraph8, lang.paragraph9, lang.paragraph10)}
       {SlideStat(lang.paragraph11, lang.paragraph12, lang.paragraph10)}
       {SlideStat(lang.paragraph13, lang.paragraph14, lang.paragraph10)}

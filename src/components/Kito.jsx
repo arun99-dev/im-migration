@@ -1,5 +1,4 @@
-import { Box } from '@mui/material'
-import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
+import { Slide, SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
 
 import kito1Img from '../images/kito/kito1.webp'
 import kito4CarGif from '../images/kito/kito4Car.gif'
@@ -53,7 +52,7 @@ const Kito = ({ selectedLang }) => {
   const lang = selectedLang ? en : it
   return (
     <>
-      <Box sx={{ width: '100%', paddingX: 3, paddingY: 10, boxSizing: 'border-box' }}>
+      <Slide>
         {SlideIntro('KITO', kito1MapImg, kito1Img, lang.paragraph1)}
         {SlideR(lang.paragraph2, kito2KidsImg)}
         {SlideR(lang.paragraph3, kito3WorkerImg)}
@@ -62,7 +61,7 @@ const Kito = ({ selectedLang }) => {
         {SlideR(lang.paragraph5, kito6GangRaftImg)}
         {SlideR(lang.paragraph6, kito7CampImg)}
         {SlideL(lang.paragraph7, kito8BackImg)}
-      </Box>
+      </Slide>
       {SlideStat(lang.paragraph8, lang.paragraph9, lang.paragraph10)}
       {SlideStat(lang.paragraph11, lang.paragraph12, lang.paragraph10)}
       {SlideStat(lang.paragraph13, lang.paragraph14, lang.paragraph10)}

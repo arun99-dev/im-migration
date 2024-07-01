@@ -1,5 +1,4 @@
-import { Box } from '@mui/material'
-import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
+import { Slide, SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
 
 import klevis1Img from '../images/klevis/klevis1.webp'
 import klevis1MapImg from '../images/klevis/klevis1Map.webp'
@@ -58,7 +57,7 @@ const Klevis = ({ selectedLang }) => {
   const lang = selectedLang ? en : it
   return (
     <>
-      <Box sx={{ width: '100%', paddingX: 3, paddingY: 10, boxSizing: 'border-box' }}>
+      <Slide>
         {SlideIntro('KLEVIS', klevis1MapImg, klevis1Img, lang.paragraph1)}
         {SlideR(lang.paragraph2, klevis2KidImg)}
         {SlideR(lang.paragraph3, klevis3ShipImg)}
@@ -67,7 +66,7 @@ const Klevis = ({ selectedLang }) => {
         {SlideR(lang.paragraph5, klevis6StadiumImg)}
         {SlideR(lang.paragraph6, klevis7QueueImg)}
         {SlideL(lang.paragraph7, klevis8HomeImg)}
-      </Box>
+      </Slide>
       {SlideStat(lang.paragraph8, lang.paragraph9, lang.paragraph10)}
       {SlideStat(lang.paragraph11, lang.paragraph12, lang.paragraph13)}
       {SlideStat(lang.paragraph14, lang.paragraph15, lang.paragraph16)}

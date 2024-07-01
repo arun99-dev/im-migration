@@ -1,5 +1,4 @@
-import { Box } from '@mui/material'
-import { SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
+import { Slide, SlideIntro, SlideR, SlideL, SlideGif, SlideStat, SlideOutro } from '../utils/slideModules.jsx'
 
 import jian1Img from '../images/jian/jian1.webp'
 import jian1MapImg from '../images/jian/jian1Map.webp'
@@ -54,7 +53,7 @@ const Jian = ({ selectedLang }) => {
   const lang = selectedLang ? en : it
   return (
     <>
-      <Box sx={{ width: '100%', paddingX: 3, paddingY: 10, boxSizing: 'border-box' }}>
+      <Slide>
         {SlideIntro('JIAN LI', jian1MapImg, jian1Img, lang.paragraph1)}
         {SlideR(lang.paragraph2, jian2FamilyImg)}
         {SlideR(lang.paragraph3, jian3TownImg)}
@@ -64,7 +63,7 @@ const Jian = ({ selectedLang }) => {
         {SlideR(lang.paragraph6, jian7TeenImg)}
         {SlideR(lang.paragraph7, jian8EmployeeImg)}
         {SlideL(lang.paragraph8, jian9JobImg)}
-      </Box>
+      </Slide>
       {SlideStat(lang.paragraph9, lang.paragraph10, lang.paragraph11)}
       {SlideStat(lang.paragraph12, lang.paragraph13, lang.paragraph14)}
       {SlideOutro(lang.paragraph15, 'I\'m JIAN LI', lang.paragraph16)}

@@ -31,8 +31,9 @@ const Home = ({ selectedLang, setRoute }) => {
       {[klevis, ana, kito, elena, jian].map((img, index) => (
         <Button
           key={index}
-          sx={{ transform: index % 2 ? 'rotate(-3deg)' : 'rotate(3deg)'}}
           component={motion.button}
+          initial={{ scale: 0, rotate: 720, opacity: 0 }}
+          whileInView={{ scale: 1,  rotate: index % 2 ? -3 : 3, opacity: 1, transition: { duration: .5 } }}
           whileHover={{ scale: 1.1, transition: { duration: .1 } }}
           whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
           onClick={() => setRoute(img.split('/').pop().split(img.includes('-') ? '-' : '.')[0])}
@@ -58,6 +59,8 @@ const Home = ({ selectedLang, setRoute }) => {
         }}
         onClick={() => window.open('https://shorturl.at/XoCVj', '_blank')}
         component={motion.button}
+        initial={{ translateY: 100 }}
+        animate={{ translateY: 0, transition: { duration: .5, delay: 1.5 } }}
         whileHover={{ scale: 1.1, transition: { duration: .1 } }}
         whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
       >

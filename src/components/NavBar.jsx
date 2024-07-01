@@ -1,20 +1,11 @@
 import { useState } from 'react'
-import {
-  Box,
-  List,
-  Button,
-  Drawer,
-  Collapse,
-  ListItem,
-  IconButton,
-  ListItemText,
-  ListItemButton 
-} from '@mui/material/'
+import { motion } from 'framer-motion'
 import { RiMenuLine } from 'react-icons/ri'
 import { HiTranslate } from 'react-icons/hi'
 import { BsInfoCircleFill } from 'react-icons/bs'
 import { BiSolidDonateHeart } from 'react-icons/bi'
 import { IoIosCall, IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
+import { Box, List, Button, Drawer, Collapse, ListItem, IconButton, ListItemText, ListItemButton  } from '@mui/material/'
 
 import logoDark from '../images/logoDark.webp'
 import logoLight from '../images/logoLight.webp'
@@ -41,8 +32,11 @@ const NavBar = ({ route, setRoute, selectedLang, setSelectedLang }) => {
         zIndex: 1,
         background: route ? 'var(--dark)' : 'none'
       }}
+      component={motion.div}
+      initial={{ translateY: -100 }}
+      animate={{ translateY: 0, transition: { duration: .5, delay: 1.5 } }}
     >
-      <Button onClick={() => setRoute('')}>
+      <Button onClick={() => (setRoute(''), window.scrollTo({ top: 0 }))}>
         <img src={route ? logoLight : logoDark} alt="im-migration logo" style={{ width: 130 }} />
       </Button>
       <IconButton sx={{ fontSize: 30 }} onClick={() => setOpenDrawer(true)}>

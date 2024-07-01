@@ -1,5 +1,6 @@
 import parse from 'html-react-parser'
 
+import { motion } from 'framer-motion'
 import { BiLogoInstagramAlt } from 'react-icons/bi'
 import { Box, Grid, IconButton, List, ListItem } from '@mui/material'
 
@@ -27,7 +28,12 @@ const en = {
 
 const Team = (name, surname, url, dev) => {
   return (
-    <ListItem style={{ justifyContent: !dev && 'end' }}>
+    <ListItem
+      style={{ justifyContent: !dev && 'end' }}
+      component={motion.div}
+      initial={{ translateX: dev ? -400 : 400, opacity: 0 }}
+      whileInView={{ translateX: 0, opacity: 1, transition: { duration: 1 } }}
+    >
       {dev && <IconButton onClick={() => window.open(url, '_blank')}><BiLogoInstagramAlt style={{ fontSize: '3vw', color: 'var(--dark)' }}/></IconButton>}
       <p style={{ margin: 0, fontSize: '3vw', fontWeight: 600, color: 'var(--dark)' }}>{name}&nbsp;</p>
       <p style={{ margin: 0, fontSize: '3vw', color: 'var(--dark)' }}>{surname}</p>
@@ -40,15 +46,39 @@ const AboutUs = ({ selectedLang }) => {
   const lang = selectedLang ? en : it
   return (
     <>
-      <Box sx={{ width: '100%', paddingX: '5vw', paddingY: 15, boxSizing: 'border-box' }}>
-        <p style={{ margin: 0, color: 'var(--red)', fontSize: '5vw', fontWeight: 700 }}>{parse(lang.paragraph1)}</p>
-        <p style={{ marginBottom: 0, fontSize: '3vw', fontWeight: 600 }}>{parse(lang.paragraph2)}</p>
-        <p style={{ margin: 0, fontSize: '2vw' }}>{parse(lang.paragraph3)}</p>
-        <p style={{ marginBottom: 0, fontSize: '3vw', fontWeight: 600 }}>{parse(lang.paragraph4)}</p>
-        <p style={{ margin: 0, fontSize: '2vw' }}>{parse(lang.paragraph5)}</p>
+      <Box sx={{ width: '100%', height: '100vh', paddingX: '5vw', paddingY: 10, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <motion.p
+          style={{ margin: 0, color: 'var(--red)', fontSize: '5vw', fontWeight: 700 }}
+          initial={{ translateY: 100, opacity: 0 }}
+          whileInView={{translateY: 0, opacity: 1, transition: { duration: .5 } }}
+        >{parse(lang.paragraph1)}</motion.p>
+        <motion.p
+          style={{ marginBottom: 0, fontSize: '3vw', fontWeight: 600 }}
+          initial={{ translateY: 100, opacity: 0 }}
+          whileInView={{translateY: 0, opacity: 1, transition: { duration: .5, delay: .5 } }}
+        >{parse(lang.paragraph2)}</motion.p>
+        <motion.p
+          style={{ margin: 0, fontSize: '2vw' }}
+          initial={{ translateY: 100, opacity: 0 }}
+          whileInView={{translateY: 0, opacity: 1, transition: { duration: .5, delay: .5 } }}
+        >{parse(lang.paragraph3)}</motion.p>
+        <motion.p
+          style={{ marginBottom: 0, fontSize: '3vw', fontWeight: 600 }}
+          initial={{ translateY: 100, opacity: 0 }}
+          whileInView={{translateY: 0, opacity: 1, transition: { duration: .5, delay: 1 } }}
+        >{parse(lang.paragraph4)}</motion.p>
+        <motion.p
+          style={{ margin: 0, fontSize: '2vw' }}
+          initial={{ translateY: 100, opacity: 0 }}
+          whileInView={{translateY: 0, opacity: 1, transition: { duration: .5, delay: 1 } }}
+        >{parse(lang.paragraph5)}</motion.p>
       </Box>
       <Box sx={{ width: '100%', paddingX: '5vw', paddingY: 10, boxSizing: 'border-box', background: 'var(--red)' }}>
-        <p style={{ marginTop: 0, textAlign: 'center', color: 'var(--dark)', fontSize: '5vw', fontWeight: 700 }}>{lang.paragraph6}</p>
+        <motion.p
+          style={{ marginTop: 0, textAlign: 'center', color: 'var(--dark)', fontSize: '5vw', fontWeight: 700 }}
+          initial={{ translateY: 100, opacity: 0 }}
+          whileInView={{ translateY: 0, opacity: 1, transition: { duration: .5 } }}
+        >{lang.paragraph6}</motion.p>
         <Grid>
           <List>
             {Team('Arun ', 'Mathiyalakan', 'https://www.instagram.com/arun99.dev/', true)}

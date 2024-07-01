@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion, useScroll } from 'framer-motion'
 
 import Ana from './components/Ana.jsx'
 import Home from './components/Home.jsx'
@@ -9,14 +10,13 @@ import Klevis from './components/Klevis.jsx'
 import Navbar from './components/NavBar.jsx'
 import Scroll from './components/Scroll.jsx'
 import AboutUs from './components/AboutUs.jsx'
-import { motion, useScroll } from "framer-motion";
 
 import './App.css'
 
 const App = () => {
   const [route, setRoute] = useState('')
-  const [selectedLang, setSelectedLang] = useState(0)
   const { scrollYProgress } = useScroll()
+  const [selectedLang, setSelectedLang] = useState(0)
 
   return (
     <>
@@ -31,7 +31,6 @@ const App = () => {
       {route === 'aboutUs' && <AboutUs selectedLang={selectedLang} />}
       {route && (
         <motion.div
-          className="progress-bar"
           style={{
             scaleX: scrollYProgress,
             position: 'fixed',
