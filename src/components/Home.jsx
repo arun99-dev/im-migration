@@ -14,7 +14,7 @@ const Home = ({ selectedLang, setRoute }) => {
     <Box
       sx={{
         height: '100vh',
-        padding: 10,
+        padding: 15,
         boxSizing: 'border-box',
         display: 'flex',
         justifyContent: 'center',
