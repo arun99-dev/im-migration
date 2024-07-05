@@ -46,7 +46,7 @@ const AboutUs = ({ selectedLang }) => {
   const lang = selectedLang ? en : it
   return (
     <>
-      <Box sx={{ width: '100%', height: '100vh', paddingX: '5vw', paddingY: 10, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <Box sx={{ width: '75%', height: '100vh', paddingX: '5vw', paddingY: 10, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <motion.p
           style={{ margin: 0, color: 'var(--red)', fontSize: '5vw', fontWeight: 700 }}
           initial={{ translateY: 100, opacity: 0 }}
