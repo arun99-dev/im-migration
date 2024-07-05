@@ -4,7 +4,7 @@ import { RiMenuLine } from 'react-icons/ri'
 import { HiTranslate } from 'react-icons/hi'
 import { BsInfoCircleFill } from 'react-icons/bs'
 import { BiSolidDonateHeart } from 'react-icons/bi'
-import { IoIosCall, IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io'
+import { IoIosCall, IoMdArrowDropdown, IoMdArrowDropup, IoMdHome } from 'react-icons/io'
 import { Box, List, Button, Drawer, Collapse, ListItem, IconButton, ListItemText, ListItemButton  } from '@mui/material/'
 
 import logoDark from '../images/logoDark.webp'
@@ -48,6 +48,12 @@ const NavBar = ({ route, setRoute, selectedLang, setSelectedLang }) => {
           onClose={() => setOpenDrawer(false)}
         >
           <List>
+            <ListItem>
+              <ListItemButton onClick={() => window.location.reload()}>
+                <IoMdHome color='var(--red)' />
+                <ListItemText primary='Home' sx={{ marginLeft: 2 }} />
+              </ListItemButton>
+            </ListItem>
             <ListItem>
               <ListItemButton onClick={() => (setRoute('aboutUs'), setOpenDrawer(false), window.scrollTo({ top: 0 }))}>
                 <BsInfoCircleFill color='var(--red)' />
