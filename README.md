@@ -1,7 +1,3 @@
-<style>
-  r { color: hsla(357.29, 92.248%, 45.935%); }
-</style>
-
 # <r>I'm</r>-migration
 
 <r>I'm</r>-migration is a web-based project designed and developed as part of our university coursework. This project showcases stories of people who have faced difficult journeys to build a new life in Europe. By sharing these experiences, the goal is to raise awareness about the difficulties encountered during the migration process and in adapting to a new reality in the destination country.
