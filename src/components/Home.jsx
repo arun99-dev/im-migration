@@ -38,7 +38,7 @@ const Home = ({ selectedLang, setRoute }) => {
           whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
           onClick={() => setRoute(img.split('/').pop().split(img.includes('-') ? '-' : '.')[0])}
         >
-          <img src={img} alt="polaroid" style={{ width: '20vh' }} />
+          <img src={img} alt="" style={{ width: '20vh' }} />
         </Button>
       ))}
       <Button
@@ -60,7 +60,7 @@ const Home = ({ selectedLang, setRoute }) => {
         onClick={() => window.open('https://shorturl.at/XoCVj', '_blank')}
         component={motion.button}
         initial={{ translateY: 100 }}
-        animate={{ translateY: 0, transition: { duration: .5, delay: 1.5 } }}
+        animate={{ translateY: 0, transition: { duration: .5, delay: 1 } }}
         whileHover={{ scale: 1.1, transition: { duration: .1 } }}
         whileTap={{ scale: 0.9, transition: { duration: .1 }  }}
       >

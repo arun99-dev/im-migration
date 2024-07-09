@@ -34,7 +34,7 @@ const NavBar = ({ route, setRoute, selectedLang, setSelectedLang }) => {
       }}
       component={motion.div}
       initial={{ translateY: -100 }}
-      animate={{ translateY: 0, transition: { duration: .5, delay: 1.5 } }}
+      animate={{ translateY: 0, transition: { duration: .5, delay: 1 } }}
     >
       <Button onClick={() => (setRoute(''), window.scrollTo({ top: 0 }))}>
         <img src={route ? logoLight : logoDark} alt="im-migration logo" style={{ width: 130 }} />
